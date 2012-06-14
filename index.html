@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The CSS-powered, fluid, flexible, responsive modal.</title>
+    <link rel="stylesheet" href="modal.less.css">
+    <style>
+        body {
+            font: normal 18px Helvetica;
+            text-align: center;
+        }
+        button {
+            font-size: 18px;
+            border-radius: 6px;
+            background-image: -moz-linear-gradient(#eee, #ccc);
+            box-shadow: 0 3px rgba(0,0,0,.4);
+            padding: 4px 8px 2px;
+            border: 0;
+        }
+        button:active {
+            position: relative;
+            top: 3px;
+            box-shadow: 0 0;
+        }
+        .modal section {
+            text-align: left;
+            background: #fff;
+            border: 1px solid black;
+            padding: 1em;
+            min-width: 300px;
+            max-width: 500px;
+        }
+        .modal .close {
+            float: right;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>The CSS-powered, fluid, flexible, responsive modal.</h1>
+    <div class="modal">
+        <section>
+            <h2>The Modal</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <button class="close">goodbye</button>
+        </section>
+    </div>
+    <button id="show">show me the modal!</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script>
+        $('#show').click(function() {
+            $('.modal').addClass('show');
+        });
+        $('.modal .close').click(function() {
+            $(this).closest('.modal').removeClass('show');
+        });
+    </script>
+  </body>
+</html>
