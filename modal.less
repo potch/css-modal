@@ -1,3 +1,5 @@
+@import 'css3';
+
 .modal {
     position: fixed;
     width: 100%;
@@ -6,25 +8,15 @@
     left: 0;
     display: none;
     z-index: 9000;
-    opacity: 0;
     overflow: hidden;
     color: #000;
     background: rgba(0,0,0,.2);
-    pointer-events: none;
     &.show {
-        pointer-events: auto;
-        opacity: 1;
         display: block;
     }
     section {
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
+        .border-box;
+        .transform(~'translate(-50%, -50%)');
         position: absolute;
         top: 50%;
         left: 50%;
