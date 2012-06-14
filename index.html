@@ -83,13 +83,29 @@
         or pump some client-side templates into this bad boy.
     </p>
     <a href="http://github.com/potch/css-modal/">Code available on GitHub!</a>
-
+    <p>
+        I'd love help getting this working in the maxiumum number of browsers
+        possible. Patches very welcome!
+    </p>
     <script src="modal.js"></script>
     <script>
         var m = new Modal(document.querySelector('#modal'));
         document.getElementById('show').addEventListener('click', function() {
             m.show();
         });
+    </script>
+    <script type="text/javascript">
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '4fda0906613f5d5ed500003c');
+        t.src = '//secure.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
     </script>
   </body>
 </html>
